@@ -264,6 +264,18 @@ export function getEditorTools(
 							window.innerWidth < 640 ? '15rem' : '30rem'
 						};" frameborder="0" allowfullscreen></iframe>`,
 					},
+					
+					peertube: {
+						regex: /^https:\/\/tv\.devdive\.tech\/(?:videos\/(?:watch|embed)|w)\/([A-Za-z0-9-]+)\/?$/,
+						embedUrl:
+							'https://tv.devdive.tech/videos/embed/<%= remote_id %>',
+						html: `<iframe ${frameTitle(
+							__('PeerTube embed')
+						)} style="width:100%; height: ${
+							window.innerWidth < 640 ? '15rem' : '30rem'
+						};" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups"></iframe>`,
+					},
+					
 					codepen: true,
 					aparat: {
 						regex: /^(?:http[s]?:\/\/)?(?:www.)?aparat\.com\/v\/([^\/\?\&]+)\/?$/,
